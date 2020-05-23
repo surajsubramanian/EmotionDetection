@@ -32,8 +32,7 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 
 ## Result
 
-[![Emotion Detection](https://img.youtube.com/vi/nEA9qj824pw/0.jpg)]
-(https://www.youtube.com/watch?v=nEA9qj824pw "Emotion Detection")
+[![Little red riding hood](http://i.imgur.com/7YTMFQp.png)](https://www.youtube.com/watch?v=nEA9qj824pw "Emotion Detection - Click to Watch!")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
