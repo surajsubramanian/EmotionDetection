@@ -45,7 +45,9 @@ LabelImg - used to manually generate training data for the YOLO model
 
 ## Libraries and Programming Languages
 OpenCV - used for implementing the YOLO model 
+
 PyTorch - used for implementing
+
 Python - libraries like pandas, os and shutil have been used extensively to implement the Emotion Recognition system
 
 ## Failed Approaches
