@@ -24,6 +24,11 @@ To run on some other video (ex : movie.mp4 )
 ```python
 python main.py -i movie.mp4
 ```
+As long videos may take longer time, it would be better to convert the video into small clips as in 
+```
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+```
+(refer : https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
