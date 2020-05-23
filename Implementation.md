@@ -60,6 +60,9 @@ Python - libraries like pandas, os and shutil have been used extensively to impl
 ## REFERENCES 
 
 [1] LabelImg (https://github.com/tzutalin/labelImg)
+
 [2] Darknet YOLO (https://github.com/pjreddie/darknet)
+
 [3] Darknet YOLO using OpenCV (https://blog.francium.tech/custom-object-training-and-detection-with-yolov3-darknet-and-opencv-41542f2ff44e)
+
 [4] Emotion Recognition using PyTorch (https://github.com/WuJie1010/Facial-Expression-Recognition.Pytorch)
