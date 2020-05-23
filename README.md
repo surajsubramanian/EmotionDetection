@@ -10,6 +10,7 @@ The repository can either be cloned or downloaded as a zip.
 
 The trained yolo detector and facial expression detector's weights should be first downloaded from the following links : 
 YOLO Detection module : https://drive.google.com/open?id=1thrygMSIDwuidJTFWKJjywEUNFGLPkbf (1)
+
 Facial Expression module : https://drive.google.com/open?id=1nTRW5B9TyjBH_ajOhCN0_qQSI4jRyfYM (2)
 
 The YOLO Detector weights (1) should be placed inside the yolo_predictor directory and the
