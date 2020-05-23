@@ -30,6 +30,10 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 ```
 (refer : https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg)
 
+## Implementation
+
+The details of implementation can be found in file Implementation.md
+
 ## Result
 
 [![Emotion Detection - Tom and Jerry](https://github.com/SurajSubramanian/EmotionDetection/raw/master/Jerry.png)](https://www.youtube.com/watch?v=nEA9qj824pw "Emotion Detection - Click to Watch!")
