@@ -34,6 +34,8 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 
 [![Emotion Detection - Tom and Jerry](https://github.com/SurajSubramanian/EmotionDetection/raw/master/Jerry.png)](https://www.youtube.com/watch?v=nEA9qj824pw "Emotion Detection - Click to Watch!")
 
+Click above picture to view video
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
