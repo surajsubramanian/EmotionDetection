@@ -30,11 +30,9 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 ```
 (refer : https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg)
 
-## Result 
+## Result
 
-<iframe src = "https://drive.google.com/open?id=1R6gPsbJz4nYH2QVvyuvUl47ENUy_QAxU">
-  Video after execution
-</iframe>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Emotion Detection from Tom and Jerry")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
