@@ -1,4 +1,4 @@
-# Foobar
+# Emotion Detection from Tom and Jerry videos
 
 This is an application to detect emotions from Tom and Jerry videos.
 
