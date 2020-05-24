@@ -30,7 +30,7 @@ To run on some other video (ex : movie.mp4 )
 ```python
 python main.py -i movie.mp4
 ```
-opencv allows us to generate videos with no audio. Hence the audio has to be extracted separately and combined with the output video file. We use ffmpeg for this purpose.
+OpenCV allows us to generate videos with no audio. Hence the audio has to be extracted separately and combined with the output video file. We use ffmpeg for this purpose.
 
 For generating audio file from the input video
 ```python
