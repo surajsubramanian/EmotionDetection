@@ -36,7 +36,7 @@ The details of implementation can be found in file Implementation.md
 
 ## Result
 
-[![Emotion Detection - Tom and Jerry](https://github.com/SurajSubramanian/EmotionDetection/raw/master/Jerry.png)](https://www.youtube.com/watch?v=nEA9qj824pw "Emotion Detection - Click to Watch!")
+[![Emotion Detection - Tom and Jerry](https://github.com/SurajSubramanian/EmotionDetection/raw/master/Jerry.png)](https://www.youtube.com/watch?v=aW4FbG4K_nQ "Emotion Detection - Click to Watch!")
 
 Click above picture to view video
 
