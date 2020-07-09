@@ -29,7 +29,7 @@ Emotion Detection
 
 - The repository was originally used to detect emotions in human faces [4]. The code which was used to detect the correct emotion from 7 classes, was modified to classify the given face into 4 emotions : happy, angry, sad, surprised.
 - The labels generated using LabelImg was used to crop the faces of Tom and Jerry into separate images using ImageExtractor.py
-- The code requires that the dataset be of the format of the FER dataset, for this purpose, the images were converted to a csv file of FER format using the code fer-dataset/FER_generator.pyo
+- The code requires that the dataset be of the format of the FER dataset, for this purpose, the images were converted to a csv file of FER format using the code [FER-formatter code](https://github.com/SurajSubramanian/EmotionDetection/blob/master/fer-formatter/code.py)
 - For the purpose of training the module, the emotiondetection.py was used in Colab to train the model for about 150 epochs.
 
 ## PREDICTION
