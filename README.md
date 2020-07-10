@@ -1,7 +1,8 @@
 # Emotion Detection from Tom and Jerry videos
 
 This is an application to detect emotions from Tom and Jerry videos.
-[Made with ML](https://madewithml.com/projects/1759/emotion-recognition-from-tom-and-jerry-videos/)
+
+[Made with ML Link](https://madewithml.com/projects/1759/emotion-recognition-from-tom-and-jerry-videos/)
 
 ## Installation
 
