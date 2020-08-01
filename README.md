@@ -15,7 +15,7 @@ The trained yolo detector and facial expression detector's weights should be fir
 
 YOLO Detection module [(1)](https://drive.google.com/open?id=1thrygMSIDwuidJTFWKJjywEUNFGLPkbf)
 
-Facial Expression module [(1)](https://drive.google.com/open?id=1nTRW5B9TyjBH_ajOhCN0_qQSI4jRyfYM)
+Facial Expression module [(2)](https://drive.google.com/open?id=1nTRW5B9TyjBH_ajOhCN0_qQSI4jRyfYM)
 
 The YOLO Detector weights (1) should be placed inside the yolo_predictor directory and the
 Facial Expression weights (2) should be placed in the root directory.
