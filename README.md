@@ -48,7 +48,7 @@ ffmpeg -i video.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
 
 ## Implementation
 
-The details of implementation can be found in file [Implementation.md](https://github.com/SurajSubramanian/EmotionDetection/blob/master/Implementation.md)
+The details of implementation can be found in [Implementation.md](https://github.com/SurajSubramanian/EmotionDetection/blob/master/Implementation.md)
 
 ## Result
 
