@@ -1,5 +1,7 @@
 # Emotion Detection from Tom and Jerry videos
 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
 This is an application to detect emotions from Tom and Jerry videos.
 
 
