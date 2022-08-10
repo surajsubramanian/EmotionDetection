@@ -4,16 +4,9 @@ imageio==2.19.3
 imutils==0.5.4
 kiwisolver==1.4.3
 matplotlib==3.5.2
-<<<<<<< HEAD
-networkx==2.6.3
-numpy==1.22
-opencv-contrib-python==4.6.0.66
-=======
 # networkx==2.6.3
 numpy==1.21.6
 opencv-contrib-python==4.6.0.66
-# opencv-python-headless==4.5.3.56
->>>>>>> Docker updates
 packaging==21.3
 Pillow==9.2.0
 pyparsing==3.0.9

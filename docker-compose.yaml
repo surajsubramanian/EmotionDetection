@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    image: surajsubramanian/emotiondetection
+    container_name: emotiondetection-run
+    volumes:
+      - ./cut.mp4:/app/cut.mp4
+      - /app/yolo_predictor
+      - .:/app
