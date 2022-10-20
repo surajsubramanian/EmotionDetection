@@ -59,7 +59,7 @@ The details of implementation can be found in [Implementation.md](https://github
 
 ## Result
 
-[![Emotion Detection - Tom and Jerry](https://github.com/SurajSubramanian/EmotionDetection/raw/master/Jerry.png)](https://www.youtube.com/watch?v=qWu9L-J4HCM "Emotion Detection - Click to Watch!")
+[![Emotion Detection - Tom and Jerry](https://raw.githubusercontent.com/SurajSubramanian/EmotionDetection/master/Jerry.png)](https://www.youtube.com/watch?v=qWu9L-J4HCM "Emotion Detection - Click to Watch!")
 
 Click above picture to view video
 
