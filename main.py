@@ -9,15 +9,6 @@ import argparse
 from visualize import *
 import warnings
 
-warnings.filterwarnings("ignore")
-
-if __name__ == "__main__":
-    root = os.getcwd()
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-i',
-                        '--input',
-                        default='cut.mp4',
-                        help='Enter path to Tom and Jerry video')
 
 warnings.filterwarnings("ignore")
 
