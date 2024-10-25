@@ -1,20 +1,18 @@
-FROM python:3.7.13-bullseye
-# RUN apk update
+FROM python:3.11.7-slim-bullseye
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN apt-get update && \
+    apt-get install wget ffmpeg libsm6 libxext6  -y
 
-RUN apt-get update
-RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN mkdir -p /app/yolo_predictor \
+    && wget --no-check-certificate -O "/app/yolo_predictor/yolov3_custom_9700.weights" "https://drive.usercontent.google.com/download?id=1thrygMSIDwuidJTFWKJjywEUNFGLPkbf&export=download&authuser=1&confirm=t" \
+    && wget --no-check-certificate -O "/app/yolo_predictor/PublicTest_model.t7" "https://drive.google.com/u/0/uc?id=1nTRW5B9TyjBH_ajOhCN0_qQSI4jRyfYM&export=download"
 
-COPY . .
+COPY pyproject.toml requirements.lock ./
+RUN PYTHONDONTWRITEBYTECODE=1 pip install --no-cache-dir -r requirements.lock
 
-WORKDIR /app/yolo_predictor
-RUN wget -O "yolov3-custom_9700.weights" "https://drive.google.com/uc?id=1thrygMSIDwuidJTFWKJjywEUNFGLPkbf&confirm=t&uuid=cdb31575-aa9a-4341-83a6-bf979cf512e8"
-RUN wget -O "PublicTest_model.t7" "https://drive.google.com/u/0/uc?id=1nTRW5B9TyjBH_ajOhCN0_qQSI4jRyfYM&export=download"
-
-WORKDIR /app
+COPY yolo_predictor/ yolo_predictor/
+COPY main.py visualize.py models/ ./
 
 CMD ["python", "main.py"]

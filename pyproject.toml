@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "emotion_detection"
+version = "1.0.0"
+description = ""
+authors = []
+dependencies = [
+    "imutils>=0.5.4",
+    "matplotlib>=3.9.2",
+    "numpy>=2.1.2",
+    "opencv-contrib-python>=4.10.0",
+    "pillow>=11.0.0",
+    "torch>=2.5.0",
+    "scikit-image>=0.24.0",
+    "jupyter>=1.1.1",
+]
+requires-python = ">= 3.11"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/python_template"]
+
+[tool.ruff]
+# Line parameters
+line-length = 90
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+[tool.ruff.lint]
+select = [
+  "A",     # builtins
+  "ASYNC", # Helps avoid blocking calls in async code
+  "B",     # bugbear
+  "C4",    # Comprehensions
+  # "C90",  # Complexity, disabled for now, will handle it separately
+  # "D",  # pydocstyle, disabled for now, will handle it separately
+  "DJ",   # django
+  "DTZ",  # datetime checks, sanity check on top of our own
+  "E",    # Errors
+  "ERA",  # Eradicate (commented out code)
+  "F",    # pyflakes
+  "FLY",  # flynt (enforce f-strings)
+  "G",    # logging format
+  "I",    # isort
+  "N",    # pep8-naming
+  "NPY",  # numpy
+  "PERF", # Perflint
+  "PGH",  # pygrep-hooks
+  "PIE",  # misc lints
+  "PL",   # pylint
+  "PT",   # pytest linting
+  "RET",  # Return
+  "RUF",  # Ruff-specific rules
+  "S",    # Bandit security
+  "SIM",  # Simplify
+  "TRY",  # exceptions handling
+  "UP",   # pyupgrade
+]
+
+ignore = [
+  "E722",
+  "F403",
+  "F405",
+  "F821",
+]
+
+unfixable = [
+  "ERA", # Manual removal of those blocks to avoid false positives getting deleted
+]
