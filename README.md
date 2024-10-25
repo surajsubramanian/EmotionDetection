@@ -2,13 +2,18 @@
 
 This is an application to detect emotions from Tom and Jerry videos.
 
-## Installation
+## Installation using docker
 
-The repository can either be cloned or downloaded as a zip.
+You can build the docker image and run it like:
+```bash
+docker build -t surajsubramanian/emotiondetection .
+
+docker run -v $(pwd)/cut.mp4:/app/cut.mp4 -v /app/yolo_predictor -v $(pwd):/app --name emotiondetection-container surajsubramanian/emotiondetection
+```
+
+or use docker-compose like `docker-compose up`. You can also use `docker-compose up --no-build` if you already have the image.
 
 ## Usage
-
-**UPDATE**: No more complex setup! Refer [READMEDocker.md](https://github.com/SurajSubramanian/EmotionDetection/blob/master/READMEDocker.md) for instructions to easily set it up using Docker :)
 
 The trained yolo detector and facial expression detector's weights should be first downloaded from the following links :
 
@@ -29,13 +34,13 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
 
 To run on the default video cut.mp4, following command can be run from the root directory
 
-```python
+```bash
 python main.py
 ```
 
 To run on some other video (ex : movie.mp4 )
 
-```python
+```bash
 python main.py -i movie.mp4
 ```
 
@@ -43,25 +48,31 @@ OpenCV allows us to generate videos with no audio. Hence the audio has to be ext
 
 For generating audio file from the input video
 
-```python
+```bash
 ffmpeg -i filename.mp4 filename.mp3
 ```
 
 For combining the audio and generated video
 
-```python
+```bash
 ffmpeg -i video.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
 ```
 
 ## Implementation
 
-The details of implementation can be found in [Implementation.md](https://github.com/SurajSubramanian/EmotionDetection/blob/master/Implementation.md)
+The details of implementation can be found in [Implementation.md](https://github.com/SurajSubramanian/EmotionDetection/blob/main/Implementation.md)
 
 ## Result
 
-[![Emotion Detection - Tom and Jerry](https://raw.githubusercontent.com/SurajSubramanian/EmotionDetection/master/Jerry.png)](https://www.youtube.com/watch?v=qWu9L-J4HCM "Emotion Detection - Click to Watch!")
+[![Emotion Detection - Tom and Jerry](https://raw.githubusercontent.com/SurajSubramanian/EmotionDetection/main/docs/Jerry.png)](https://www.youtube.com/watch?v=qWu9L-J4HCM "Emotion Detection - Click to Watch!")
 
 Click above picture to view video
+
+## Development
+
+The project uses rye as the package manager. You can find the installation instructions [here](https://rye.astral.sh/guide/installation/)
+
+To setup the project, simply run `rye sync` and add new packages like `rye add "flask>=2.0"`
 
 ## Contributing
 

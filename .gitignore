@@ -1,0 +1,16 @@
+# temp files
+temp/
+
+# cache
+.ruff_cache/
+__pycache__/
+
+# virtual environment
+.venv/
+
+# model weights
+*.t7
+*.weights
+
+# Training dataset
+Train*.mp4
