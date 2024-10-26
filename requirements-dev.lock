@@ -120,7 +120,6 @@ jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
     # via jsonschema
 jupyter==1.1.1
-    # via emotion-detection
 jupyter-client==8.6.3
     # via ipykernel
     # via jupyter-console
