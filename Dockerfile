@@ -7,10 +7,11 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+COPY yolo_predictor/ yolo_predictor/
+
 COPY pyproject.toml requirements.lock ./
 RUN PYTHONDONTWRITEBYTECODE=1 pip install --no-cache-dir -r requirements.lock
 
-COPY yolo_predictor/ yolo_predictor/
 COPY models/ models/
 COPY transforms/ transforms/
 COPY main.py visualize.py ./
