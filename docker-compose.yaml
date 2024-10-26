@@ -2,9 +2,10 @@ version: "3.9"
 services:
   app:
     build: .
-    image: surajsubramanian/emotiondetection
-    container_name: emotiondetection-run
+    image: surajsubramanian/emotion-detection:test
+    container_name: emotion-detection-run
     command: ["python", "main.py", "-i", "/tests/inputs/input.mp4", "-o", "/tests/outputs/output.mp4"]
+    platform: linux/amd64
     volumes:
       - type: bind
         source: ./tests/
