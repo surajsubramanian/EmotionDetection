@@ -10,9 +10,8 @@ authors = []
 dependencies = [
     "imutils>=0.5.4",
     "matplotlib>=3.9.2",
-    "numpy>=2.1.2",
     "opencv-contrib-python>=4.10.0",
-    "pillow>=11.0.0",
+    "pillow>=10.2.0",
     "torch>=2.5.0",
     "scikit-image>=0.24.0",
 ]

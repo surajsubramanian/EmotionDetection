@@ -93,7 +93,7 @@ ipykernel==6.29.5
     # via jupyter
     # via jupyter-console
     # via jupyterlab
-ipython==8.28.0
+ipython==8.29.0
     # via ipykernel
     # via ipywidgets
     # via jupyter-console
@@ -197,7 +197,6 @@ notebook-shim==0.2.4
     # via notebook
 numpy==2.1.2
     # via contourpy
-    # via emotion-detection
     # via imageio
     # via matplotlib
     # via opencv-contrib-python
