@@ -4,17 +4,16 @@ build-backend = "hatchling.build"
 
 [project]
 name = "emotion_detection"
-version = "1.1.0"
+version = "1.2.0"
 description = ""
 authors = []
 dependencies = [
     "imutils>=0.5.4",
     "matplotlib>=3.9.2",
-    "numpy>=2.1.2",
     "opencv-contrib-python>=4.10.0",
-    "pillow>=11.0.0",
-    "torch>=2.5.0",
+    "pillow>=10.2.0",
     "scikit-image>=0.24.0",
+    "torch>=2.5.0",
 ]
 requires-python = ">= 3.11"
 

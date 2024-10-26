@@ -41,7 +41,6 @@ networkx==3.4.2
     # via torch
 numpy==2.1.2
     # via contourpy
-    # via emotion-detection
     # via imageio
     # via matplotlib
     # via opencv-contrib-python

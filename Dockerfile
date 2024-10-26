@@ -3,7 +3,9 @@ FROM python:3.11.7-slim-bullseye
 WORKDIR /app
 
 RUN apt-get update && \
-    apt-get install wget ffmpeg libsm6 libxext6  -y
+    apt-get install wget ffmpeg libsm6 libxext6  -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /app/yolo_predictor \
     && wget --no-check-certificate -O "/app/yolo_predictor/yolov3_custom_9700.weights" "https://drive.usercontent.google.com/download?id=1thrygMSIDwuidJTFWKJjywEUNFGLPkbf&export=download&authuser=1&confirm=t" \

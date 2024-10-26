@@ -13,7 +13,8 @@ __pycache__/
 *.weights
 
 # Video files
-*.mp4
+*output*.mp4
+*Train*.mp4
 
 # mac
 .DS_Store
