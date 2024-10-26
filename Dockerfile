@@ -13,6 +13,8 @@ COPY pyproject.toml requirements.lock ./
 RUN PYTHONDONTWRITEBYTECODE=1 pip install --no-cache-dir -r requirements.lock
 
 COPY yolo_predictor/ yolo_predictor/
-COPY main.py visualize.py models/ ./
+COPY models/ models/
+COPY transforms/ transforms/
+COPY main.py visualize.py ./
 
 CMD ["python", "main.py"]

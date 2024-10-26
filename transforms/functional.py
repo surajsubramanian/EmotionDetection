@@ -348,7 +348,9 @@ def five_crop(img, size):
     w, h = img.size
     crop_h, crop_w = size
     if crop_w > w or crop_h > h:
-        raise ValueError(f"Requested crop size {size} is bigger than input size {(h, w)}")
+        raise ValueError(
+            f"Requested crop size {size} is bigger than input size {(h, w)}"
+        )
     tl = img.crop((0, 0, crop_w, crop_h))
     tr = img.crop((w - crop_w, 0, w, crop_h))
     bl = img.crop((0, h - crop_h, crop_w, h))
@@ -384,10 +386,7 @@ def ten_crop(img, size, vertical_flip=False):
 
     first_five = five_crop(img, size)
 
-    if vertical_flip:
-        img = vflip(img)
-    else:
-        img = hflip(img)
+    img = vflip(img) if vertical_flip else hflip(img)
 
     second_five = five_crop(img, size)
     return first_five + second_five

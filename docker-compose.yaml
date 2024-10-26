@@ -4,7 +4,8 @@ services:
     build: .
     image: surajsubramanian/emotiondetection
     container_name: emotiondetection-run
+    command: ["python", "main.py", "-i", "/tests/inputs/input.mp4", "-o", "/tests/outputs/output.mp4"]
     volumes:
-      - ./cut.mp4:/app/cut.mp4
-      - /app/yolo_predictor
-      - .:/app
+      - type: bind
+        source: ./tests/
+        target: /tests/

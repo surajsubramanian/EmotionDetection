@@ -29,8 +29,6 @@ dev-dependencies = [
 packages = ["src/python_template"]
 
 [tool.ruff]
-# Line parameters
-line-length = 90
 indent-width = 4
 
 [tool.ruff.format]
@@ -70,10 +68,28 @@ select = [
 ]
 
 ignore = [
+  "B007",
+  "B028",
+  "E501",
   "E722",
   "F403",
   "F405",
   "F821",
+  "N802",
+  "N812",
+  "N816",
+  "NPY002",
+  "RET504",
+  "S101",
+  "S311",
+  "SIM115",
+  "TRY003",
+  "PLR0912",
+  "PLR0913",
+  "PLR1704",
+  "PLR2004",
+  "UP008",
+  "UP038",
 ]
 
 unfixable = [

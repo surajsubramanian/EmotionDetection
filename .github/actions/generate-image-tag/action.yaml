@@ -1,0 +1,31 @@
+name: Generate image tag
+description: Generate image tag using the project version in pyproject.toml
+
+inputs:
+  working-directory:
+    description: Path to the directory where your pyproject.toml file is present
+    default: .
+
+outputs:
+  image-tag:
+    description: Image tag
+    value: ${{ steps.image-tag.outputs.image-tag }}
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5
+      with:
+        python-version-file: "${{ inputs.working-directory }}/pyproject.toml"
+
+    - name: Generate image tag
+      id: image-tag
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        version=$(python -c "import tomllib; print(tomllib.load(open(\"pyproject.toml\", \"rb\"))[\"project\"][\"version\"])")
+        echo "image-tag=$version" >> $GITHUB_OUTPUT

@@ -16,13 +16,22 @@ if __name__ == "__main__":
     root = os.getcwd()
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-i", "--input", default="cut.mp4", help="Enter path to Tom and Jerry video"
+        "-i",
+        "--input",
+        default="input.mp4",
+        help="Enter path to Tom and Jerry video",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="output.mp4",
+        help="Output video path",
     )
     args = parser.parse_args()
-    print("Video location :", args.input)
 
-    if args.input not in os.listdir(root):
-        sys.exit("Entered video location is invalid")
+    if not os.path.exists(args.input):
+        sys.exit(f"Entered input video path {args.input} is invalid")
+    print("Input video location :", args.input)
 
     labelsPath = os.path.join(root, "yolo_predictor/custom.names")
     LABELS = open(labelsPath).read().strip().split("\n")
@@ -118,9 +127,12 @@ if __name__ == "__main__":
                 )
         if writer is None:
             # initialize our video writer
-            fourcc = cv2.VideoWriter_fourcc(*"MP4V")
+            fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+            output_dir = os.path.dirname(args.output)
+            if output_dir:
+                os.makedirs(output_dir, exist_ok=True)
             writer = cv2.VideoWriter(
-                "output.mp4", fourcc, 30, (frame.shape[1], frame.shape[0]), True
+                args.output, fourcc, 30, (frame.shape[1], frame.shape[0]), True
             )
             # some information on processing single frame
             if total > 0:

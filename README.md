@@ -8,7 +8,7 @@ You can build the docker image and run it like:
 ```bash
 docker build -t surajsubramanian/emotiondetection .
 
-docker run -v $(pwd)/cut.mp4:/app/cut.mp4 -v /app/yolo_predictor -v $(pwd):/app --name emotiondetection-container surajsubramanian/emotiondetection
+docker run -v $(pwd)/tests/inputs/input.mp4:/app/tests/inputs/input.mp4 -v /app/yolo_predictor -v $(pwd):/app --name emotiondetection-container surajsubramanian/emotiondetection
 ```
 
 or use docker-compose like `docker-compose up`. You can also use `docker-compose up --no-build` if you already have the image.
@@ -27,12 +27,12 @@ Facial Expression weights (2) should be placed in the root directory.
 As long videos may take longer time, it would be better to convert the video into small clips as in
 
 ```
-ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 tests/inputs/input.mp4
 ```
 
 (refer : https://stackoverflow.com/questions/18444194/cutting-the-videos-based-on-start-and-end-time-using-ffmpeg)
 
-To run on the default video cut.mp4, following command can be run from the root directory
+To run on the default video tests/inputs/input.mp4, following command can be run from the root directory
 
 ```bash
 python main.py

@@ -12,5 +12,8 @@ __pycache__/
 *.t7
 *.weights
 
-# Training dataset
-Train*.mp4
+# Video files
+*.mp4
+
+# mac
+.DS_Store

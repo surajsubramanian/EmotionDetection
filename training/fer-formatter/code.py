@@ -47,8 +47,6 @@ root_test = [root1, root2, root3, root4]
 
 for r in root_test:
     listdir = os.listdir(r)
-    if ".DS_Store" in listdir:
-        listdir.remove(".DS_Store")
     for i, img in enumerate(listdir):
         raw_img = io.imread(r + img)
         gray = rgb2gray(raw_img)

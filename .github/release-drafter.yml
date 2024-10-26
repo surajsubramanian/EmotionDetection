@@ -1,0 +1,62 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: '🚨 Breaking Changes'
+    label: 'major'
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '⬆️ Dependencies'
+    label: 'dependencies'
+  - title: '🔧 Infra/tooling/refactor'
+    labels:
+      - 'infra'
+      - 'devops'
+      - 'techdebt'
+change-template: '- $TITLE (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+exclude-labels:
+  - 'skip-changelog'
+template: |
+  ## Changes
+
+  $CHANGES
+autolabeler:
+  - label: 'fix'
+    branch:
+      - '/fix\/.+/'
+    title:
+      - '/fix/i'
+      - '/🐛/'
+      - '/bug/i'
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/'
+      - '/feat\/.+/'
+    title:
+      - '/feature/i'
+      - '/✨/'
+  - label: 'infra'
+    title:
+      - '/🔧/'
+      - '/infra/i'
+      - '/devops/i'
+    branch:
+      - '/infra\/.+/'
+      - '/devops\/.+/'
+  - label: 'techdebt'
+    title:
+      - '/techdebt/i'
+    branch:
+      - '/techdebt\/.+/'
+  - label: 'major'
+    title:
+      - '/🚨/'
+    branch:
+      - '/breaking\/.+/'
